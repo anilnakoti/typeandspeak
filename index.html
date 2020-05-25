@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Type-to-speech</title>
+    <style>
+        body {
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-center" style="background-repeat: repeat-x; background-size: 100% 100%;"
+        id="background-gif">
+        <img src="https://cdn.clipart.email/c997a11273144a9a0c208227c896cc95_happy-smile-emotclip-art-with-talk-speech-bubble-vector-clip-art-_626-469.jpeg" alt="logo" width="150" height="150">
+        <h1 class="mb-4">Type-n-speak</h1>
+
+        <div class="row bg-dark">
+            <div class="col-md-6 mx-auto">
+                <form>
+                    <div class="form-group mt-4">
+                        <textarea id="text-input" class="form-control"
+                            placeholder="Type here for the speak">Today is hard, tomorrow will be worse, but the day after tomorrow will be sunshine. Never give up my friend.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="rate" style="color: #fff">Speed</label>
+                        <div id="rate-value" class="badge badge-primary float-right">1</div>
+                        <input type="range" id="rate" class="custom-range" min="0.5" max="2" value="1" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label for="pitch" style="color: #fff">Pitch</label>
+                        <div id="pitch-value" class="badge badge-primary float-right">1</div>
+                        <input type="range" id="pitch" class="custom-range" min="0.5" max="2" value="1" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <select id="voice-select" class="form-control form-control-lg"></select>
+                    </div>
+                    <button id="play" class="btn btn-light btn-lg btn-block mb-2">Play</button>
+                </form>
+                <button id="stop" class="btn btn-danger btn-lg btn-block mb-3">Stop</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="dist/js/main.js"></script>
+</body>
+
+</html>
